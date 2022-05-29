@@ -4,6 +4,8 @@
 
 [![NPM](https://nodei.co/npm/betterdiscord-plugin-notices.png)](https://nodei.co/npm/betterdiscord-plugin-notices/)
 
+Full Documentation: https://notmike101.github.io/betterdiscord-plugin-notices/
+
 ## Installation
 
 ```
