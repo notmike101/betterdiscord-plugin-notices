@@ -4,19 +4,19 @@ import {
   update as TweenUpdate
 } from "@tweenjs/tween.js";
 
-type NoticePosition = 'top-left' | 'top-center' | 'top-right' | 'bottom-left' | 'bottom-center' | 'bottom-right';
-type NoticeButtonType = 'default' | 'success' | 'warning' | 'info' | 'danger';
-type NoticeButtonPosition = 'left' | 'center' | 'right';
-type NoticeTypes = 'default' | 'success' | 'warning' | 'danger';
+export type NoticePosition = 'top-left' | 'top-center' | 'top-right' | 'bottom-left' | 'bottom-center' | 'bottom-right';
+export type NoticeButtonType = 'default' | 'success' | 'warning' | 'info' | 'danger';
+export type NoticeButtonPosition = 'left' | 'center' | 'right';
+export type NoticeTypes = 'default' | 'success' | 'warning' | 'danger';
 
-interface NoticeButtonOptions {
+export interface NoticeButtonOptions {
   text: string;
   type?: NoticeButtonType;
   position?: NoticeButtonPosition;
   callback?: () => void;
 }
 
-interface NoticeOptions {
+export interface NoticeOptions {
   position?: NoticePosition;
   timeout?: number;
   icon?: string;
@@ -25,7 +25,14 @@ interface NoticeOptions {
   type?: NoticeTypes;
 }
 
-export class Notices {
+export interface NoticeInterface {
+  noticeContainer: HTMLDivElement;
+  notices: HTMLDivElement[];
+  createNotice(options: NoticeOptions): void;
+  dismissNotice(noticeId: number): void;
+}
+
+export class Notices implements NoticeInterface {
   public noticeContainer: HTMLDivElement;
   private noticeContainerTopLeft: HTMLDivElement;
   private noticeContainerTopCenter: HTMLDivElement;
