@@ -1,5 +1,11 @@
 # BetterDiscord Plugin Notices Library
 
+# NOTICE
+
+This library is deprecated in favor of [betterdiscord-plugin-libs](https://www.npmjs.com/package/betterdiscord-plugin-libs).
+
+---
+
 > Library to assist in displaying notices in various locations for BetterDiscord plugins.
 
 [![NPM](https://nodei.co/npm/betterdiscord-plugin-notices.png)](https://nodei.co/npm/betterdiscord-plugin-notices/)
