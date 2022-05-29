@@ -20,7 +20,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - env:
+      - run: echo "Setting environment variable to skip tag build"
+        env:
           BUILD_ON_TAG: 'false'
 
       - name: Setup NodeJS
